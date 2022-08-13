@@ -43,6 +43,11 @@ main {
     position: absolute;
     left: -20%;
     top: -5%;
+    transition: 0.3s;
+}
+
+.robo:hover {
+    height: 113%;
 }
 
 .titulo {
@@ -229,5 +234,35 @@ main {
         width: 96vw;
         height: 80vh;
         margin: 10vh auto;
+    }
+
+    .robo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main {
+        flex-direction: column;
+    }
+
+    .montador-conteudo {
+        padding: 35% 10%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main {
+        flex-direction: column;
+    }
+
+    .montador-conteudo {
+        padding: 35% 10%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 875px){
+    .estatistica-valor::after {
+        content: none
     }
 }

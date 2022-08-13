@@ -2,6 +2,15 @@
 
 const upgrades = document.querySelectorAll("[data-controle]")
 const estatisticas = document.querySelectorAll("[data-estatistica]")
+const img_robotron = document.querySelector(".robo")
+const robos = [
+    "img/robotron_amarelo.png",
+    "img/robotron_azul.png",
+    "img/robotron_branco.png",
+    "img/robotron_preto.png",
+    "img/robotron_rosa.png",
+    "img/robotron_vermelho.png"
+]
 const pecas = {
     "bracos": {
         "forca": 29,
@@ -35,6 +44,19 @@ const pecas = {
         "velocidade": -2
     }
 }
+
+let i = 1
+img_robotron.addEventListener("click", () => {
+    img_robotron.setAttribute('src', robos[i])
+    if (i <= 5) {
+        i = i + 1
+    }else{
+        i = 0
+        img_robotron.setAttribute('src', robos[i])
+        i = i + 1
+    }
+})
+
 
 upgrades.forEach((element) => {
     element.addEventListener("click", (event) => {
